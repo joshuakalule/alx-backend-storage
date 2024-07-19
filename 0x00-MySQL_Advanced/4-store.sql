@@ -11,7 +11,7 @@ BEGIN
     SELECT quantity FROM items WHERE name = NEW.item_name INTO old_quantity;
     SET diff = old_quantity - NEW.number;
     UPDATE items
-    SET quantity = IF(diff > 0, diff, 0)
+    SET quantity = diff
     WHERE name = NEW.item_name;
 END$$
 DELIMITER ;
