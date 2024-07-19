@@ -2,7 +2,6 @@
 -- Creates a trigger that decreases the quantity of an item
 -- after buying it
 DELIMITER $$
-USE holberton
 CREATE TRIGGER update_items
 AFTER INSERT ON orders
 FOR EACH ROW
