@@ -21,7 +21,7 @@ if __name__ == '__main__':
 
     print("Methods:")
     for k, v in count_methods(collection_nginx, method_strs).items():
-        print(f"    method {k}: {v}")
+        print(f"method {k}: {v}")
 
     status = collection_nginx.count_documents({'path': '/status'})
     print(f"{status} status check")
