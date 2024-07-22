@@ -16,6 +16,9 @@ if __name__ == '__main__':
     collection_nginx = pymongo.MongoClient().logs.nginx
     method_strs = ['GET', 'POST', 'PUT', 'PATCH', 'DELETE']
 
+    log_count = collection_nginx.count_documents({})
+    print(f"{log_count} logs")
+
     print("Methods:")
     for k, v in count_methods(collection_nginx, method_strs).items():
         print(f"    method {k}: {v}")
