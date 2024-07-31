@@ -39,7 +39,7 @@ class Cache:
             try:
                 return fn(data)
             except Exception as e:
-                return None
+                raise e
         return data
 
     def get_str(self, key: str) -> str:
